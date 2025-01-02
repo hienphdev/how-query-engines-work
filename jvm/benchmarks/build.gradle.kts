@@ -1,6 +1,5 @@
 plugins {
     kotlin("plugin.serialization")
-    scala
     application
 }
 val arrowVersion: String by rootProject.extra
