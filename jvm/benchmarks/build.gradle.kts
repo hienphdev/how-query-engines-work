@@ -1,11 +1,12 @@
 plugins {
-    kotlin("plugin.serialization") version "1.3.61"
+    kotlin("plugin.serialization")
     scala
     application
 }
+val arrowVersion: String by rootProject.extra
 
 application {
-    mainClassName = "io.andygrove.kquery.benchmarks.Benchmarks"
+    mainClass = "io.andygrove.kquery.benchmarks.Benchmarks"
 }
 
 dependencies {
@@ -18,6 +19,5 @@ dependencies {
     implementation(project(":execution"))
     implementation(project(":sql"))
 
-    implementation("org.apache.arrow:arrow-vector:0.17.0")
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.4")
+    implementation("org.apache.arrow:arrow-vector:${arrowVersion}")
 }
