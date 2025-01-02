@@ -8,6 +8,7 @@ dependencies {
     implementation(project(":datatypes"))
 
     implementation("org.apache.arrow:arrow-memory:${arrowVersion}")
+    implementation("org.apache.arrow:arrow-memory-netty:${arrowVersion}")
     implementation("org.apache.arrow:arrow-vector:${arrowVersion}")
 
     implementation("org.apache.hadoop:hadoop-common:${hadoopVersion}")

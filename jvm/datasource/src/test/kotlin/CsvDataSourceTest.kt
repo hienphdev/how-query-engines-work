@@ -26,10 +26,10 @@ class CsvDataSourceTest {
   @Test
   fun `read csv with no projection`() {
     val csv = CsvDataSource(File(dir, "employee.csv").absolutePath, null, true, 1024)
-    println(csv.schema)
 
     val headers = listOf("id", "first_name", "last_name", "state", "job_title", "salary")
     val result = csv.scan(listOf())
+    println(csv.schema())
 
     result.asSequence().forEach {
       val field = it.field(0)
